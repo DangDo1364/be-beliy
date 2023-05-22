@@ -26,15 +26,15 @@ import { ImportDetail } from './importdetail/importdetail.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'beliy-db.mysql.database.azure.com',
       port: 3306,
-      username: 'root',
-      password: '',
+      username: 'dangdo',
+      password: '01259977014Do@',
       database: 'db_beliy',
       entities: [Category, Product, Size, ProductDetail, Image,
                  Customer, Order, OrderDetail, Employee, Stock,
                  ProductStock, ImportBill, ImportDetail],
-      synchronize: false,
+      synchronize: true,
     }), CategoryModule, ProductModule, ImageModule],
 })
 export class AppModule {
